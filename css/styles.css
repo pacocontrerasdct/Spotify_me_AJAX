@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-size: 62.5%;
+  font-family: Arial, courier, verdana;
+  color: black;
+}
+#container {
+  margin: 0 auto;
+  width: 80%;
+}
+header, nav, main, footer {
+  margin-bottom: 10px;
+}
+nav {
+  display: inline-block;
+}
+input, select, button {
+  font-size: 1.6em;
+  text-align: left;
+  vertical-align: top;
+  margin-right: 15px;
+}
+main {
+  border-top: 2px solid black;
+}
+h1 {
+  font-size: 3em;
+}
+.versalita {
+  font-style: oblique;
+}
