@@ -47,12 +47,12 @@ function successfulRequest(request) {
 
 
  // artist, track, album
-  var limit = 5;
-
+  var limit = 10;
+   
   
   function getDatafromSpotify() {
     var input = getFormInput();
-    var selector = getSelectInput() 
+    
     //var request = ajaxRequest('GET', 'https://api.spotify.com/v1/search?q=' + input //+ '&offset=0&limit=' + limit + '&type=' + selector + '')
     //url = 'https://api.spotify.com/v1/search?q=' + input + '&offset=0&limit=' + //limit + '&type=' + selector + '';
     //console.log(url);
@@ -72,15 +72,20 @@ function successfulRequest(request) {
     //    getResultData.append(template);
     //}
 
-
+    getSelectInput();
     $.get('https://api.spotify.com/v1/search?q=' + input + '&offset=0&limit=' +limit + '&type=' + selector + '', function(response) {
         console.log('inside getData');
         url = 'https://api.spotify.com/v1/search?q=' + input + '&offset=0&limit=' + limit + '&type=' + selector + '';
         console.log(url);
         template = "";
-        console.log(response[0]);
+        var selectors = "artists";
+        var query = response.artists.items;
+        //var query = response.selector.items;
         // dataType add to search type selector: artist, track, album
-        $.each(response.selector.items, function(index, data) 
+        var selectors = selector + 's';
+        //var query = response.selectors.items[0];
+        
+        $.each(query, function(index, data) 
         {
           console.log('inside response');
           console.log(data);
