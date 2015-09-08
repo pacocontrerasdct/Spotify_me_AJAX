@@ -29,3 +29,9 @@ h1 {
 .versalita {
   font-style: oblique;
 }
+#results {
+  font-family: courier, Arial;
+  font-size: 1.6em;
+  text-indent: 0.5em;
+
+}
